@@ -1,0 +1,7 @@
+#ifndef BRC_MANAGER_HPP
+#define BRC_MANAGER_HPP
+
+
+
+
+#endif //BRC_MANAGER_HPP

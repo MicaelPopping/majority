@@ -1,3 +1,6 @@
+.DS_Store
+majority
+
 # Prerequisites
 *.d
 
@@ -24,7 +27,7 @@
 *.lai
 *.la
 *.a
-*.lib
+*ib.l
 
 # Executables
 *.exe
