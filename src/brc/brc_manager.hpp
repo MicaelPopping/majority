@@ -12,6 +12,6 @@ private:
 
 public:
 
-}
+};
 
 #endif //BRC_MANAGER_HPP
