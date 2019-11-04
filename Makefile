@@ -28,13 +28,13 @@ LIBOBJ := $(filter-out src/main.o,$(OBJ))
 # implicit rules
 %.o: %.cpp
 	@echo "// Compiling:" $(LOCAL_PATH)/$<
-	$(CXX) -c $(INCLUDES) $(CXXFLAGS) $< -o $@
+	$(CXX) -std=c++11 -c $(INCLUDES) $(CXXFLAGS) $< -o $@
 
 # Actual targets
 
 $(PROG): $(OBJ)
 	@echo "// Building binary:" $(notdir $@)
-	$(CXX) -o $@ $^ $(CXXFLAGS) $(LIBS)
+	$(CXX)  -o $@ $^ $(CXXFLAGS) $(LIBS)
 
 clean:
 	@echo "// Cleaning up..."
