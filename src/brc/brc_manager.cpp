@@ -19,7 +19,7 @@ BRC_Manager::BRC_Manager()
 
 BRC_Manager::BRC_Manager(set<string>& inputs) {
 
-    generate_values(inputs);
+    //generate_values(inputs);
 }
 
 /************************************************************************/
@@ -39,18 +39,18 @@ void BRC_Manager::insert(string input) {
 
 /************************************************************************/
 
-void BRC_Manager::generate_values() {
+/*void BRC_Manager::generate_values() {
 
     if(inputs_number == 0)
         return;
 
     //initialize_operator();
     start_values();
-}
+}*/
 
 /************************************************************************/
 
-void BRC_Manager::generate_values(set<string>& inputs) {
+/*void BRC_Manager::generate_values(set<string>& inputs) {
 
     inputs_number = inputs.size();
 
@@ -59,7 +59,7 @@ void BRC_Manager::generate_values(set<string>& inputs) {
     }
 
     generate_values();
-}
+}*/
 
 /************************************************************************/
 
