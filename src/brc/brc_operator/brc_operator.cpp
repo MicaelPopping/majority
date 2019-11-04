@@ -21,7 +21,7 @@ BR_Code* BRC_Operator::execute_and(BR_Code& operating_1, BR_Code& operating_2) {
 
     BR_Code* result = new BR_Code(INPUTS_NUMBER, VECTOR_SIZE);
 
-    for(unsigned int i = 0; i < VECTOR_SIZE; i++)
+    for(uint8_t i = 0; i < VECTOR_SIZE; i++)
         result->br_code[i] = operating_1.br_code[i] & operating_2.br_code[i];
 
     return result;
@@ -36,7 +36,7 @@ BR_Code* BRC_Operator::execute_or(BR_Code& operating_1, BR_Code& operating_2) {
 
     BR_Code* result = new BR_Code(INPUTS_NUMBER, VECTOR_SIZE);
 
-    for(unsigned int i = 0; i < VECTOR_SIZE; i++)
+    for(uint8_t i = 0; i < VECTOR_SIZE; i++)
         result->br_code[i] = operating_1.br_code[i] | operating_2.br_code[i];
 
     return result;
