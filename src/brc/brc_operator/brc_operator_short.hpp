@@ -10,7 +10,7 @@
 class BRC_Operator_Short : public BRC_Operator {
 
 public:
-    BRC_Operator_Short(uint8_t number_of_inputs);
+    BRC_Operator_Short(uint8_t inputs_number);
     virtual ~BRC_Operator_Short();
 
     BR_Code* execute_not(BR_Code& operating_1);
