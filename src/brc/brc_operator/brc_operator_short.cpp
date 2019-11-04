@@ -1,6 +1,9 @@
 #include "brc/brc_operator/brc_operator_short.hpp"
 
 
+#include <cmath>
+
+
 /************************************************************************
 *                           Publics methods                             *
 ************************************************************************/
@@ -44,7 +47,7 @@ BR_Code* BRC_Operator_Short::execute_not(BR_Code& operating_1) {
 
 void BRC_Operator_Short::convert_dec_to_bin(uint64_t number_dec, char* number_bin, uint8_t size) {
 
-    uint_64_t current_value = 0;
+    uint64_t current_value = 0;
 
     for(uint8_t i = (size-1) ; i >= 0; i--) {
 
@@ -70,7 +73,7 @@ void BRC_Operator_Short::convert_dec_to_bin(uint64_t number_dec, char* number_bi
 
 /***********************************************************************/
 
-unsigned long int BRC_Operator_Short::convert_bin_to_dec(char* number_bin, uint8_t size) {
+uint64_t BRC_Operator_Short::convert_bin_to_dec(char* number_bin, uint8_t size) {
 
     uint64_t current_value = 0;
 
