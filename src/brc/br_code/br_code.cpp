@@ -7,6 +7,7 @@
 /************************************************************************
 *                           Publics methods                             *
 ************************************************************************/
+
 BR_Code::BR_Code(uint8_t inputs_number, uint8_t vector_size) 
 : INPUTS_NUMBER(inputs_number) {
 
