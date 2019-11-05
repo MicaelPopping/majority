@@ -6,4 +6,5 @@ src/brc/brc_operator/brc_operator_short.cpp \
 src/brc/brc_operator/brc_operator_s1.cpp \
 src/brc/brc_operator/brc_operator_s2.cpp \
 src/brc/brc_operator/brc_operator_s3.cpp \
-src/brc/brc_operator/brc_operator_s4.cpp
+src/brc/brc_operator/brc_operator_s4.cpp \
+src/brc/brc_operator/brc_operator_s5.cpp
