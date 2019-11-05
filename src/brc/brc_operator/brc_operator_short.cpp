@@ -23,7 +23,7 @@ BR_Code* BRC_Operator_Short::execute_not(BR_Code& operating_1) {
         return nullptr;
 
     BR_Code* result = new BR_Code(INPUTS_NUMBER);
-    uint32_t number_of_rows =  INPUTS_NUMBER << 2; // Arrumar
+    uint32_t number_of_rows =  1 << INPUTS_NUMBER;
     char number_bin[number_of_rows];
 
     convert_dec_to_bin(*operating_1.br_code, number_bin, number_of_rows);
@@ -53,7 +53,7 @@ void BRC_Operator_Short::convert_dec_to_bin(uint64_t number_dec, char* number_bi
 
         if(current_value < number_dec) {
 
-            uint64_t pot = pow(2,i); // Arrumar
+            uint64_t pot = 1 << i;
 
             if((current_value + pot) <= number_dec) {
 
@@ -81,7 +81,7 @@ uint64_t BRC_Operator_Short::convert_bin_to_dec(char* number_bin, uint8_t size) 
 
         if(number_bin[i] == '1') {
 
-            uint64_t value = pow(2, i); // Arrrumar
+            uint64_t value = 1 << i;
             current_value += value;
         }
     }
