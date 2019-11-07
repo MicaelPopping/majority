@@ -3,9 +3,14 @@
 
 #include <utility>
 using std::pair;
-
 #include <iterator>
 using std::iterator;
+
+#include "brc/brc_operator/brc_operator_s1.hpp"
+#include "brc/brc_operator/brc_operator_s2.hpp"
+#include "brc/brc_operator/brc_operator_s3.hpp"
+#include "brc/brc_operator/brc_operator_s4.hpp"
+#include "brc/brc_operator/brc_operator_s5.hpp"
 
 
 /************************************************************************
@@ -19,7 +24,7 @@ BRC_Manager::BRC_Manager()
 
 BRC_Manager::BRC_Manager(set<string>& inputs) {
 
-    //generate_values(inputs);
+    generate_values(inputs);
 }
 
 /************************************************************************/
@@ -39,18 +44,18 @@ void BRC_Manager::insert(string input) {
 
 /************************************************************************/
 
-/*void BRC_Manager::generate_values() {
+void BRC_Manager::generate_values() {
 
     if(inputs_number == 0)
         return;
 
-    //initialize_operator();
+    initialize_operator();
     start_values();
-}*/
+}
 
 /************************************************************************/
 
-/*void BRC_Manager::generate_values(set<string>& inputs) {
+void BRC_Manager::generate_values(set<string>& inputs) {
 
     inputs_number = inputs.size();
 
@@ -59,7 +64,7 @@ void BRC_Manager::insert(string input) {
     }
 
     generate_values();
-}*/
+}
 
 /************************************************************************/
 
@@ -106,7 +111,24 @@ BR_Code* BRC_Manager::execute_maj3(BR_Code& operating_1, BR_Code& operating_2, B
 
 void BRC_Manager::initialize_operator() {
 
-    // IMPLEMENTAR METODO.
+    /*
+    if(inputs_number > 5)
+        brc_operator = new BRC_Operator_Long(inputs_number);
+    */
+    if(inputs_number == 5)
+        brc_operator = new BRC_Operator_S5();
+
+    else if(inputs_number == 4)
+        brc_operator = new BRC_Operator_S4();
+
+    else if(inputs_number == 3)
+        brc_operator = new BRC_Operator_S3();
+    
+    else if(inputs_number == 2)
+        brc_operator = new BRC_Operator_S2();
+
+    else if(inputs_number == 1)
+        brc_operator = new BRC_Operator_S1();
 }
 
 /************************************************************************/

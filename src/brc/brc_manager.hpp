@@ -41,12 +41,12 @@ public:
     /**
      * These methods assign values to the inputs.
     */
-    //void generate_values();
+    void generate_values();
 
     /**
      * @param set containing the inputs.
     */
-    //void generate_values(set<string>& inputs);
+    void generate_values(set<string>& inputs);
 
     /**
      * 
